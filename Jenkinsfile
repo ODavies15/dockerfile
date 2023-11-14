@@ -33,8 +33,7 @@ pipeline {
             steps {
 
                 sh '''
-                docker stop task1
-                docker rm task1
+                
                 docker run -d -p 80:80 --name task1 odavies15/task1jenk
                 '''
 
