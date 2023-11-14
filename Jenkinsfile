@@ -9,7 +9,7 @@ pipeline {
             steps {
 
                 sh '''
-                docker build -t odavies15/task1jenk
+                docker build -t odavies15/task1jenk .
                 '''
 
             }
