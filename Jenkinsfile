@@ -37,7 +37,7 @@ pipeline {
             steps {
 
                 sh '''
-                ssh jenkins@aoli-deploy <<EOF
+                ssh jenkins@oli-deploy <<EOF
                 export YOUR_NAME=${YOUR_NAME}
                 docker network rm task1-net && echo "removed network" || echo "network already removed"
                 docker network create task1-net
