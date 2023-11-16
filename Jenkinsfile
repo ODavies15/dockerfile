@@ -48,9 +48,9 @@ pipeline {
                 docker rm flask-app3 && echo "removed flask-app3" || echo "flask-app3 does not exist"
                 docker network rm task1-net && echo "removed network" || echo "network already removed"
                 docker network create task1-net
-                docker run -d --name flask-app1 --network task1-net -p 5200:5500 odavies15/task1jenk
-                docker run -d --name flask-app2 --network task1-net -p 5400:5500 odavies15/task1jenk
-                docker run -d --name flask-app3 --network task1-net -p 5300:5500 odavies15/task1jenk
+                docker run -d --name flask-app1 --network task1-net odavies15/task1jenk
+                docker run -d --name flask-app2 --network task1-net odavies15/task1jenk
+                docker run -d --name flask-app3 --network task1-net odavies15/task1jenk
                 docker run -d --name nginx --network task1-net -p 80:80 odavies15/task1-nginx
                 '''
 
